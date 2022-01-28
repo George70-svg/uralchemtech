@@ -590,6 +590,7 @@ main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .sho
 }
 
 main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .secondText {
+    width: 100%;
     position: absolute;
     height: 70px;
     display: -webkit-box;

@@ -319,6 +319,7 @@ main {
               border-bottom-left-radius: 0px;
               border-bottom-right-radius: 0px; }
             main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .secondText {
+              width: 100%;
               position: absolute;
               height: 70px;
               display: flex;
