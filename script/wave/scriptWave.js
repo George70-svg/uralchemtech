@@ -3,7 +3,7 @@
 let instance = new SiriWave({
  container: document.getElementById('wave'),
  width: pageWidth,
- height: 200,
+ height: 100,
  style: 'ios9',
 
  curveDefinition: [
@@ -59,7 +59,7 @@ instance.start();
 instance.setSpeed(0.05);
 
 // set amplitude
-instance.setAmplitude(1.2);
+instance.setAmplitude(1.5);
 
 // destroy the instance
 //instance.dispose();
