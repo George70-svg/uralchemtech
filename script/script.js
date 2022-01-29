@@ -3,14 +3,14 @@
 const pageWidth = document.documentElement.scrollWidth
 
 //landing page initialization
-function startLanding() {
+function startLandingPage() {
 	startProblemCard()
 	startScheme()
 	startAccordion()
 	startMenu()
 }
 
-startLanding()
+startLandingPage()
 
 //function for clicking the button-arrow in the "problem" card
 function startProblemCard() {
