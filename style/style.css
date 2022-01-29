@@ -48,9 +48,10 @@ header {
       display: flex;
       align-items: center;
       margin: 0 20px 0 0; }
-      header .headerDesktop .logoName p {
+      header .headerDesktop .logoName a {
         margin: 0 10px 0 0;
-        color: #f5f5f7; }
+        color: #f5f5f7;
+        cursor: pointer; }
       header .headerDesktop .logoName .logoWave {
         margin: 0; }
     header .headerDesktop .menu {
@@ -94,7 +95,7 @@ header {
       align-items: center; }
       header .headerMobile .mainContent .logoName {
         width: 100px; }
-        header .headerMobile .mainContent .logoName p {
+        header .headerMobile .mainContent .logoName a {
           font-size: 12px;
           color: #f5f5f7; }
       header .headerMobile .mainContent .logoWaveMobile {
@@ -275,6 +276,7 @@ main {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
+          align-items: flex-start;
           margin: 15px auto 0 auto;
           flex-grow: 2; }
           main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem {
@@ -282,7 +284,8 @@ main {
             text-align: center;
             flex-basis: 20%;
             margin: 25px;
-            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5)); }
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+            cursor: pointer; }
             main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .logo {
               position: relative;
               z-index: 2;

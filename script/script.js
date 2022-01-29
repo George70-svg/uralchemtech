@@ -38,7 +38,26 @@ function startProblemCard() {
 			heightDownText = 70
 		}
 
-		for(let i = 0; i < arrowsButton.length; i++) {
+		for(let i = 0; i < problemCardContainer.length; i++) {
+			problemCardContainer[i].addEventListener('click', () => {
+				if(problemSecondText[i].classList.contains('hide')) {
+					showProblemText(problemSecondText[i], arrowsContainer[i])
+				} else if(problemSecondText[i].classList.contains('show')) {
+					hideProblemText(problemSecondText[i], arrowsContainer[i])
+				}
+			})
+
+			problemCardContainer[i].addEventListener('mouseenter', () => {
+				showProblemText(problemSecondText[i], arrowsContainer[i])
+			})
+
+			problemCardContainer[i].addEventListener('mouseleave', () => {
+				hideProblemText(problemSecondText[i], arrowsContainer[i])
+			})
+
+		}
+
+		/*for(let i = 0; i < arrowsButton.length; i++) {
 			arrowsButton[i].addEventListener('click', () => {
 				if(problemSecondText[i].classList.contains('hide')) {
 					showProblemText(problemSecondText[i], arrowsContainer[i])
@@ -46,7 +65,7 @@ function startProblemCard() {
 					hideProblemText(problemSecondText[i], arrowsContainer[i])
 				}
 			})
-		}
+		}*/
 
 		function showProblemText(text, button) {
 			text.style.transform = `translateY(0px)`
