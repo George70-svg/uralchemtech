@@ -1,4 +1,4 @@
-const pageWidth = document.documentElement.scrollWidth
+//variable "pageWidth" from script.js
 
 let instance = new SiriWave({
  container: document.getElementById('wave'),

@@ -1,5 +1,7 @@
 'use strict'
 
+const pageWidth = document.documentElement.scrollWidth
+
 //landing page initialization
 function startLanding() {
 	startProblemCard()
@@ -18,7 +20,6 @@ function startProblemCard() {
 	const problemSecondText = document.querySelectorAll('.secondText')
 	const problemCardContainer = document.querySelectorAll('.problem')
 
-	//variable "pageWidth" from scriptWave.js
 	if(pageWidth < 1024) {
 		problemSecondText.forEach(text => {
 			text.classList.remove('hide')
@@ -38,6 +39,7 @@ function startProblemCard() {
 			heightDownText = 70
 		}
 
+		//loop for add event listener mousemove and click for open/close text in card
 		for(let i = 0; i < problemCardContainer.length; i++) {
 			problemCardContainer[i].addEventListener('click', () => {
 				if(problemSecondText[i].classList.contains('hide')) {
@@ -56,16 +58,6 @@ function startProblemCard() {
 			})
 
 		}
-
-		/*for(let i = 0; i < arrowsButton.length; i++) {
-			arrowsButton[i].addEventListener('click', () => {
-				if(problemSecondText[i].classList.contains('hide')) {
-					showProblemText(problemSecondText[i], arrowsContainer[i])
-				} else if(problemSecondText[i].classList.contains('show')) {
-					hideProblemText(problemSecondText[i], arrowsContainer[i])
-				}
-			})
-		}*/
 
 		function showProblemText(text, button) {
 			text.style.transform = `translateY(0px)`
