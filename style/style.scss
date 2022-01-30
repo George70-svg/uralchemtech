@@ -385,17 +385,7 @@ main {
 
         .companyInfo {
           width: 60%;
-          margin: 0 auto;
-          font-size: 18px;
-          flex-basis: 10%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .solution {
-          width: 60%;
-          margin: 0 auto;
+          margin: 20px auto 20px auto;
           font-size: 18px;
           flex-basis: 10%;
           display: flex;
@@ -432,22 +422,12 @@ main {
                 width: 64px;
                 transition: width .3s;
               }
-
-              &:hover {
-                padding: 14px 0 0 0;
-                transition: padding .3s;
-
-                img {
-                  width: 70px;
-                  transition: width .3s;
-                }
-              }
             }
 
             .mainText {
               position: relative;
               z-index: 2;
-              height: 100px;
+              height: 110px;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -473,14 +453,14 @@ main {
             .secondText {
               width: 100%;
               position: absolute;
-              height: 70px;
+              height: 125px;
               display: flex;
               justify-content: center;
               align-items: center;
               background-color: $bg_second;
               border-bottom-left-radius: 12px;
               border-bottom-right-radius: 12px;
-              transform: translateY(-70px);
+              transform: translateY(-125px);
               transition: transform .3s;
               z-index: 1;
 
@@ -498,8 +478,8 @@ main {
 
             .arrowWrapper {
               position: relative;
-              bottom: -45px;
-              transform: translateY(-70px);
+              bottom: -100px;
+              transform: translateY(-125px);
               transition: transform .3s;
               z-index: 3;
 
@@ -525,21 +505,15 @@ main {
         opacity: 0.9;
         color: $main_fc_light;
 
-        h2 {
-          margin: 0;
-          padding: 10px 0;
-          font-size: 40px;
-        }
-
         .info {
-          width: 60%;
+          width: 70%;
           margin: 0 auto;
           font-size: 18px;
         }
 
         .scheme {
           width: 980px;
-          height: 500px;
+          height: 470px;
           position: relative;
           margin: 20px auto 0 auto;
           border-radius: 10px;
@@ -585,7 +559,7 @@ main {
 
           .mixture2 {
             top: 20px;
-            left: 650px;
+            left: 850px;
             background-color: #9961f2;
           }
 
@@ -601,9 +575,15 @@ main {
             background-color: #ffa500;
           }
 
-          .ultrasound {
+          .ultrasound1 {
             top: 325px;
             left: 325px;
+            background-color: #eb4242;
+          }
+
+          .ultrasound2 {
+            top: 20px;
+            left: 615px;
             background-color: #eb4242;
           }
 
@@ -776,25 +756,38 @@ main {
             background: linear-gradient(to bottom, #9961f2 30%, #b38eed 100%);
           }
 
-          .mixture1_flotation1_hor {
-            width: 185px;
+          .ultrasound2_flotation1_hor {
+            width: 150px;
             height: 15px;
             top: 62.5px;
             left: 466px;
-            background: linear-gradient(to left, #9961f2 10%, #b38eed 100%);
+            background: linear-gradient(to left, #eb4242 10%, #eb7171 100%);
 
-            .mixture1_flotation1_arrow {
+            .ultrasound2_flotation1_arrow {
               transform: rotate(-90deg);
-              animation: mixture1_flotation1_arrow 2s infinite ease-in-out;
+              animation: ultrasound2_flotation1_arrow 2s infinite ease-in-out;
             }
           }
 
-          .mixture1_flotation1_ver {
+          .ultrasound2_flotation1_ver {
             width: 15px;
             height: 14px;
             top: 87px;
             left: 442px;
-            background: linear-gradient(to bottom, #b38eed 20%, #ffa500 100%);
+            background: linear-gradient(to bottom, #eb7171 20%, #ffa500 100%);
+          }
+
+          .mixture1_ultrasound2_hor {
+            width: 137px;
+            height: 15px;
+            top: 62.5px;
+            left: 714px;
+            background: linear-gradient(to left, #9961f2 0%, #b38eed 20%, #b38eed 85%, #eb4242 100%);
+
+            .mixture1_ultrasound2_arrow {
+              transform: rotate(-90deg);
+              animation: mixture1_ultrasound2_arrow 2s infinite ease-in-out;
+            }
           }
 
           .flotation1_flotation2_arc {
@@ -808,13 +801,13 @@ main {
             }
           }
 
-          .mixture1_flotation1_arc {
+          .ultrasound2_flotation1_arc {
             &:after {
               top: 63px;
               left: 442px;
               border-left: 15px solid rgba(0, 0, 0, 0);
               border-right: 15px solid rgba(0, 0, 0, 0);
-              border-top: 15px solid #b38eed;
+              border-top: 15px solid #eb7171;
               border-bottom: 15px solid rgba(0, 0, 0, 0);
             }
           }
@@ -989,9 +982,23 @@ main {
             }
           }
 
-          @keyframes mixture1_flotation1_arrow {
+          @keyframes ultrasound2_flotation1_arrow {
             from {
-              left: 155px;
+              left: 120px;
+              opacity: 0
+            }
+            50% {
+              opacity: 1
+            }
+            to {
+              left: 0px;
+              opacity: 0
+            }
+          }
+
+          @keyframes mixture1_ultrasound2_arrow {
+            from {
+              left: 110px;
               opacity: 0
             }
             50% {
@@ -1126,12 +1133,6 @@ main {
           font-size: 40px
         }
 
-        .benefitsInfo {
-          width: 60%;
-          margin: 0 auto;
-          font-size: 18px
-        }
-
         //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА" (ОСНОВНАЯ ВЕРСИЯ)
         .benefitsDesktop {
           display: flex;
@@ -1170,15 +1171,11 @@ main {
               visibility: hidden;
               font-size: 32px;
               position: absolute;
-              bottom: 100px;
+              bottom: 120px;
               left: 20px;
               margin: 0;
               opacity: 0;
               text-shadow: 2px 2px 10px #000;
-
-              sup {
-                font-size: 16px;
-              }
             }
 
             .secondText {
@@ -1191,10 +1188,6 @@ main {
               margin: 0;
               opacity: 0;
               text-shadow: 2px 2px 10px #000;
-
-              sup {
-                font-size: 16px;
-              }
             }
           }
 
@@ -1275,11 +1268,11 @@ main {
               }
 
               .backgroundImg1 {
-                background-image: url('../img/cards/ecology.jpeg')
+                background-image: url('../img/cards/flowDown.jpg')
               }
 
               .backgroundImg2 {
-                background-image: url('../img/cards/energy.jpg')
+                background-image: url('../img/cards/kalij.jpeg')
               }
 
               .backgroundImg3 {
@@ -1287,15 +1280,15 @@ main {
               }
 
               .backgroundImg4 {
-                background-image: url('../img/cards/manufactur.jpg')
+                background-image: url('../img/cards/energy.jpg')
               }
 
               .backgroundImg5 {
-                background-image: url('../img/cards/kalij.jpeg')
+                background-image: url('../img/cards/ecology.jpeg')
               }
 
               .backgroundImg6 {
-                background-image: url('../img/cards/flowDown.jpg')
+                background-image: url('../img/cards/manufactur.jpg')
               }
 
               .infoText {
@@ -1664,16 +1657,6 @@ main {
                 img {
                   width: 100px;
                 }
-
-                &:hover {
-                  padding: 25px 0 0 0;
-                  transition: padding .3s;
-
-                  img {
-                    width: 110px;
-                    transition: width .3s;
-                  }
-                }
               }
 
               .mainText {
@@ -1685,8 +1668,8 @@ main {
               }
 
               .secondText {
-                height: 100px;
-                transform: translateY(-100px);
+                height: 190px;
+                transform: translateY(-190px);
 
                 p {
                   font-size: 20px;
@@ -1694,8 +1677,8 @@ main {
               }
 
               .arrowWrapper {
-                bottom: -60px;
-                transform: translateY(-100px);
+                bottom: -150px;
+                transform: translateY(-190px);
 
                 img {
                   width: 75px;
@@ -1717,10 +1700,6 @@ main {
         .schemeWrapper {
           position: relative;
 
-          h2 {
-            font-size: 56px;
-          }
-
           .info {
             margin: 30px auto 0 auto;
             font-size: 28px
@@ -1739,10 +1718,6 @@ main {
         .benefitsWrapper {
           h2 {
             font-size: 56px
-          }
-
-          .benefitsInfo {
-            font-size: 28px
           }
 
           //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА" (ОСНОВНАЯ ВЕРСИЯ)
@@ -1926,8 +1901,20 @@ main {
               }
 
               .secondText {
+                height: 150px;
+                transform: translateY(-150px);
+
                 p {
                   font-size: 16px;
+                }
+              }
+
+              .arrowWrapper {
+                bottom: -120px;
+                transform: translateY(-150px);
+
+                img {
+                  width: 60px;
                 }
               }
             }
@@ -1936,10 +1923,6 @@ main {
 
         //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
         .schemeWrapper {
-          h2 {
-            font-size: 50px;
-          }
-
           .info {
             margin: 30px auto 0 auto;
             font-size: 24px
@@ -1954,10 +1937,6 @@ main {
         .benefitsWrapper {
           h2 {
             font-size: 50px
-          }
-
-          .benefitsInfo {
-            font-size: 24px
           }
 
           //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА" (ОСНОВНАЯ ВЕРСИЯ)
@@ -2293,7 +2272,7 @@ main {
               }
 
               .secondText {
-                height: 60px;
+                height: 90px;
                 transform: translateY(0px);
 
                 p {
@@ -2320,10 +2299,6 @@ main {
 
           h2 {
             font-size: 36px
-          }
-
-          .benefitsInfo {
-            font-size: 18px
           }
 
           //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА" (ОСНОВНАЯ ВЕРСИЯ)
@@ -2360,6 +2335,7 @@ main {
         //КОНТЕЙНЕР "О КОМПАНИИ"
         .aboutCompanyWrapper {
           height: 100vh;
+          margin-top: 20px;
           padding: 50px 0;
           flex-direction: column;
           justify-content: center;
@@ -2617,7 +2593,7 @@ main {
               }
 
               .secondText {
-                height: 50px;
+                height: 90px;
                 transform: translateY(0px);
 
                 p {
@@ -2644,11 +2620,6 @@ main {
 
           h2 {
             font-size: 24px
-          }
-
-          .benefitsInfo {
-            font-size: 14px;
-            width: 80%;
           }
 
           //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА" (ОСНОВНАЯ ВЕРСИЯ)
@@ -2685,6 +2656,7 @@ main {
         //КОНТЕЙНЕР "О КОМПАНИИ"
         .aboutCompanyWrapper {
           height: 100%;
+          margin-top: 20px;
           padding: 25px 0;
           flex-direction: column;
           justify-content: center;

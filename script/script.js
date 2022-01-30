@@ -34,9 +34,11 @@ function startProblemCard() {
 		toogleBorderRadiusForMainText()
 		let heightDownText
 		if(pageWidth >= 1900) {
-			heightDownText = 100
+			heightDownText = 190
+		} else if(pageWidth >= 1600) {
+			heightDownText = 150
 		} else {
-			heightDownText = 70
+			heightDownText = 125
 		}
 
 		//loop for add event listener mousemove and click for open/close text in card
@@ -110,7 +112,7 @@ function startScheme() {
 		},
 
 		{//mixture2
-			coordinates: [155, 30],
+			coordinates: [152, 25],
 			style: 'textFrame3',
 			text: 'Приготовление раствора реагентов',
 		},
@@ -121,20 +123,27 @@ function startScheme() {
 			text: 'Флотомашина (шламовая флотация)',
 		},
 
-		{//ultrasound
+		{//ultrasound1
 			coordinates: [370, 110],
 			style: 'textFrame3',
 			text: 'УЗ-обработка реагентов (активация реагентов, снижение расхода реагентов)',
 		},
 
+
+		{//ultrasound2
+			coordinates: [430, 180],
+			style: 'textFrame2',
+			text: 'УЗ-обработка реагентов (активация реагентов, снижение расхода реагентов)',
+		},
+
 		{//flotation2
-			coordinates: [156, 120],
+			coordinates: [155, 120],
 			style: 'textFrame5',
 			text: 'Флотомашина (сильвиновая флотация)',
 		},
 
 		{//mixture1
-			coordinates: [470, 180],
+			coordinates: [668, 180],
 			style: 'textFrame2',
 			text: 'Приготовление раствора реагентов',
 		},
