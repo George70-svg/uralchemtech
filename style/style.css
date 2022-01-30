@@ -263,7 +263,8 @@ main {
         main .mainContentWrapper .mainContainer .problemsWrapper .companyInfo {
           width: 60%;
           margin: 20px auto 20px auto;
-          font-size: 18px;
+          font-size: 20px;
+          line-height: 1.8rem;
           flex-basis: 10%;
           display: flex;
           align-items: center;
@@ -314,27 +315,27 @@ main {
             main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .secondText {
               width: 100%;
               position: absolute;
-              height: 125px;
+              height: 130px;
               display: flex;
               justify-content: center;
               align-items: center;
               background-color: #295af0;
               border-bottom-left-radius: 12px;
               border-bottom-right-radius: 12px;
-              transform: translateY(-125px);
+              transform: translateY(-130px);
               transition: transform .3s;
               z-index: 1; }
               main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .secondText p {
                 padding: 0 15px;
                 margin-top: 0;
                 color: #f5f5f7;
-                font-size: 12px; }
+                font-size: 13px; }
             main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .startShow {
               transform: translateY(0px); }
             main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .arrowWrapper {
               position: relative;
-              bottom: -100px;
-              transform: translateY(-125px);
+              bottom: -105px;
+              transform: translateY(-130px);
               transition: transform .3s;
               z-index: 3; }
               main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .arrowWrapper img {
@@ -350,9 +351,10 @@ main {
         opacity: 0.9;
         color: #f5f5f7; }
         main .mainContentWrapper .mainContainer .schemeWrapper .info {
-          width: 70%;
+          width: 80%;
           margin: 0 auto;
-          font-size: 18px; }
+          font-size: 18px;
+          line-height: 1.8rem; }
         main .mainContentWrapper .mainContainer .schemeWrapper .scheme {
           width: 980px;
           height: 470px;
@@ -538,8 +540,8 @@ main {
               animation: ultrasound2_flotation1_arrow 2s infinite ease-in-out; }
           main .mainContentWrapper .mainContainer .schemeWrapper .scheme .ultrasound2_flotation1_ver {
             width: 15px;
-            height: 14px;
-            top: 87px;
+            height: 15px;
+            top: 86px;
             left: 442px;
             background: linear-gradient(to bottom, #eb7171 20%, #ffa500 100%); }
           main .mainContentWrapper .mainContainer .schemeWrapper .scheme .mixture1_ultrasound2_hor {
@@ -559,7 +561,7 @@ main {
             border-top: 15px solid rgba(0, 0, 0, 0);
             border-bottom: 15px solid rgba(0, 0, 0, 0); }
           main .mainContentWrapper .mainContainer .schemeWrapper .scheme .ultrasound2_flotation1_arc:after {
-            top: 63px;
+            top: 62px;
             left: 442px;
             border-left: 15px solid rgba(0, 0, 0, 0);
             border-right: 15px solid rgba(0, 0, 0, 0);
@@ -1089,7 +1091,8 @@ main {
   main .mainContentWrapper .mainContainer .problemsWrapper h2 {
     font-size: 56px; }
   main .mainContentWrapper .mainContainer .problemsWrapper .companyInfo {
-    font-size: 28px; }
+    font-size: 28px;
+    line-height: 2.5rem; }
   main .mainContentWrapper .mainContainer .problemsWrapper .solution {
     font-size: 28px; }
   main .mainContentWrapper .mainContainer .problemsWrapper .problems {
@@ -1121,7 +1124,8 @@ main {
     position: relative; }
     main .mainContentWrapper .mainContainer .schemeWrapper .info {
       margin: 30px auto 0 auto;
-      font-size: 28px; }
+      font-size: 28px;
+      line-height: 2.2rem; }
     main .mainContentWrapper .mainContainer .schemeWrapper .scheme {
       position: absolute;
       top: 50%;
@@ -1190,7 +1194,8 @@ main {
   main .mainContentWrapper .mainContainer .problemsWrapper h2 {
     font-size: 50px; }
   main .mainContentWrapper .mainContainer .problemsWrapper .companyInfo {
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 2.3rem; }
   main .mainContentWrapper .mainContainer .problemsWrapper .solution {
     font-size: 24px; }
   main .mainContentWrapper .mainContainer .problemsWrapper .problems {
@@ -1212,7 +1217,8 @@ main {
         width: 60px; }
   main .mainContentWrapper .mainContainer .schemeWrapper .info {
     margin: 30px auto 0 auto;
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 2rem; }
   main .mainContentWrapper .mainContainer .schemeWrapper .scheme {
     margin: 50px auto 0 auto; }
   main .mainContentWrapper .mainContainer .benefitsWrapper h2 {
@@ -1279,6 +1285,8 @@ main {
       main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem {
         flex-basis: 22%;
         margin: 15px; }
+        main .mainContentWrapper .mainContainer .problemsWrapper .problems .problem .secondText p {
+          font-size: 12px; }
     main .mainContentWrapper .mainContainer .employeesWrapper .employees .employee {
       flex-basis: 30%;
       margin: 15px; }

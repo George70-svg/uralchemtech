@@ -38,7 +38,7 @@ function startProblemCard() {
 		} else if(pageWidth >= 1600) {
 			heightDownText = 150
 		} else {
-			heightDownText = 125
+			heightDownText = 130
 		}
 
 		//loop for add event listener mousemove and click for open/close text in card
