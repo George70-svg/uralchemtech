@@ -500,6 +500,9 @@ main {
       //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
       .schemeWrapper {
         height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding-top: 30px;
         text-align: center;
         background-color: #2d2e2e;
@@ -507,17 +510,24 @@ main {
         color: $main_fc_light;
 
         .info {
-          width: 80%;
+          //width: 80%;
+          order: 0;
+          flex-grow: 0;
+          padding: 0 15px;
           margin: 0 auto;
           font-size: 18px;
           line-height: 1.8rem;
+          text-align: justify;
         }
 
         .scheme {
-          width: 980px;
+          min-width: 980px;
           height: 470px;
+          margin-left: 25px !important;
+          order: -1;
+          flex-grow: 1;
           position: relative;
-          margin: 20px auto 0 auto;
+          //margin: 20px auto 0 auto;
           border-radius: 10px;
           background-color: white;
           z-index: 5;
@@ -805,7 +815,7 @@ main {
 
           .ultrasound2_flotation1_arc {
             &:after {
-              top: 62px;
+              top: 63px;
               left: 442px;
               border-left: 15px solid rgba(0, 0, 0, 0);
               border-right: 15px solid rgba(0, 0, 0, 0);
@@ -1547,16 +1557,16 @@ main {
 
             .contactBlock {
               flex-basis: 20%;
-              border: 1px solid white;
+              //border: 1px solid white;
               margin: 5px;
               padding: 10px;
 
               img {
-                width: 25px;
+                width: 27px;
               }
 
               p {
-                font-size: 14px;
+                font-size: 15px;
               }
 
               .loadDocument {
@@ -1566,11 +1576,11 @@ main {
                 cursor: pointer;
 
                 p {
-                  font-size: 12px;
+                  font-size: 13px;
                 }
 
                 img {
-                  width: 25px;
+                  width: 27px;
                   margin-left: 5px;
                 }
               }
@@ -1701,19 +1711,20 @@ main {
         //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
         .schemeWrapper {
           position: relative;
+          flex-direction: column;
 
           .info {
             margin: 30px auto 0 auto;
+            width: 60%;
+            order: 1;
+            flex-grow: 0;
             font-size: 28px;
             line-height: 2.2rem;
           }
 
           .scheme {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 50px auto 0 auto;
+            order: 0;
+            flex-grow: 0;
           }
         }
 
@@ -2072,7 +2083,7 @@ main {
   }
 }
 
-//Отображение для экранов от 1024px до 1299px шириной
+//Отображение для экранов от 1024px до 1290px шириной
 @media only screen and (min-width: 1024px) and (max-width: 1290px) {
   header {
     .headerDesktop {
@@ -2111,6 +2122,24 @@ main {
                 }
               }
             }
+          }
+        }
+
+        //КОНТЕЙНЕР "ТЕХНОЛОГИЧЕСКАЯ СХЕМА"
+        .schemeWrapper {
+          flex-direction: column;
+
+          .info {
+            //width: 80%;
+            order: 0;
+            flex-grow: 0;
+            padding: 0 20px;
+          }
+
+          .scheme {
+            order: 1;
+            flex-grow: 0;
+            margin-top: 25px;
           }
         }
 
@@ -2487,7 +2516,7 @@ main {
 
             .info {
               .contactBlock {
-                border: 1px solid black;
+                //border: 1px solid black;
 
                 .loadDocument {
                   p {
