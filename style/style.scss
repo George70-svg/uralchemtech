@@ -498,634 +498,648 @@ main {
       //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
       .schemeWrapper {
         height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 30px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px;
         background-color: #2d2e2e;
         opacity: 0.9;
         color: $main_fc_light;
 
-        .info {
-          //width: 80%;
-          order: 0;
-          flex-grow: 0;
-          padding: 0 15px;
-          margin: 0 auto;
-          font-size: 18px;
-          line-height: 1.8rem;
-          text-align: justify;
+        h2 {
+          margin: 0;
+          padding: 10px 0;
+          font-size: 40px;
         }
 
-        .scheme {
-          min-width: 980px;
-          height: 470px;
-          margin-left: 25px !important;
-          order: -1;
-          flex-grow: 1;
+        .schemeBlock {
           position: relative;
-          //margin: 20px auto 0 auto;
-          border-radius: 10px;
-          background-color: white;
-          z-index: 5;
-          filter: none;
-          transition: filter background-color .5s;
+          display: flex;
+          flex-grow: 1;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
 
-          .block {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            cursor: pointer;
-
-            img {
-              width: 64px;
-              height: 64px;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
+          .info {
+            order: 0;
+            flex-grow: 0;
+            padding: 0 15px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.8rem;
+            text-align: justify;
           }
 
-          .crusher {
-            top: 100px;
-            left: 25px;
-            background-color: #117d0f;
-          }
-
-          .suspension {
-            top: 100px;
-            left: 215px;
-            background-color: #117d0f;
-          }
-
-          .mixture1 {
-            top: 250px;
-            left: 115px;
-            background-color: #9961f2;
-          }
-
-          .mixture2 {
-            top: 20px;
-            left: 850px;
-            background-color: #9961f2;
-          }
-
-          .flotation1 {
-            top: 100px;
-            left: 400px;
-            background-color: #ffa500;
-          }
-
-          .flotation2 {
-            top: 200px;
-            left: 550px;
-            background-color: #ffa500;
-          }
-
-          .ultrasound1 {
-            top: 325px;
-            left: 325px;
-            background-color: #eb4242;
-          }
-
-          .ultrasound2 {
-            top: 20px;
-            left: 615px;
-            background-color: #eb4242;
-          }
-
-          .dryer {
-            top: 200px;
-            left: 750px;
-            background-color: #18a2f2;
-          }
-
-          .product {
-            top: 350px;
-            left: 850px;
-            background-color: #18a2f2;
-          }
-
-          .line {
-            position: absolute;
-
-            img {
-              width: 27px;
-              height: 27px;
-              position: absolute;
-            }
-
-            .hor {
-              top: -6px;
-              left: 0;
-            }
-          }
-
-          .arc {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 20px;
-              height: 20px;
-              border-radius: 50px 50px 50px 50px;
-              transform: rotate(-45deg);
-            }
-          }
-
-          .crusher_suspension {
-            width: 93px;
-            height: 15px;
-            top: 142px;
-            left: 123px;
-            background: linear-gradient(to right, #117d0f 0%, #75cc1f 20%, #75cc1f 80%, #117d0f 100%);
-
-            .crusher_suspension_arrow {
-              top: -6px;
-              left: 0;
-              transform: rotate(90deg);
-              animation: crusher_suspension_arrow 3s infinite ease-in-out;
-            }
-          }
-
-          .suspension_flotation1 {
-            width: 88px;
-            height: 15px;
-            top: 142px;
-            left: 313px;
-            background: linear-gradient(to right, #117d0f 0%, #75cc1f 20%, #75cc1f 80%, #ffa500 100%);
-
-            .suspension_flotation1_arrow {
-              transform: rotate(90deg);
-              animation: suspension_flotation1_arrow 3s infinite ease-in-out;
-            }
-          }
-
-          .flotation1_flotation2_hor {
-            width: 85px;
-            height: 15px;
-            top: 140px;
-            left: 499px;
-            background: linear-gradient(to right, #ffa500 0%, #faba43 20%);
-
-            .flotation1_flotation2_arrow {
-              transform: rotate(90deg);
-              animation: crusher_suspension_arrow 3s infinite ease-in-out;
-            }
-          }
-
-          .flotation1_flotation2_ver {
-            width: 15px;
-            height: 37px;
-            top: 164px;
-            left: 593px;
-            background: linear-gradient(to bottom, #faba43 80%, #ffa500 100%);
-          }
-
-          .flotation2_dryer {
-            width: 103px;
-            height: 15px;
-            top: 242px;
-            left: 648px;
-            background: linear-gradient(to right, #ffa500 0%, #faba43 20%, #faba43 85%, #18a2f2 100%);
-
-            .flotation2_dryer_arrow {
-              transform: rotate(90deg);
-              animation: flotation2_dryer_arrow 3s infinite ease-in-out;
-            }
-          }
-
-          .dryer_product_hor {
-            width: 34px;
-            height: 15px;
-            top: 242px;
-            left: 849px;
-            background: linear-gradient(to right, #18a2f2 0%, #61bdf2 30%);
-          }
-
-          .dryer_product_ver {
-            width: 15px;
-            height: 85px;
-            top: 266px;
-            left: 892px;
-            background: linear-gradient(to bottom, #61bdf2 80%, #18a2f2 100%);
-
-            .dryer_product_arrow {
-              top: 0;
-              left: -6px;
-              transform: rotate(180deg);
-              animation: dryer_product_arrow 3s infinite ease-in-out;
-            }
-          }
-
-          .ultrasound_flotation2_hor {
-            width: 160px;
-            height: 15px;
-            top: 242px;
-            left: 391px;
-            background: linear-gradient(to right, #eb7171 90%, #ffa500 100%);
-
-            .ultrasound_flotation2_arrow {
-              transform: rotate(90deg);
-              animation: ultrasound_flotation2_arrow 2s infinite ease-in-out;
-            }
-          }
-
-          .ultrasound_flotation2_ver {
-            width: 15px;
-            height: 60px;
-            top: 266px;
-            left: 367px;
-            background: linear-gradient(to top, #eb4242 5%, #eb7171 100%);
-          }
-
-          .mixture2_ultrasound_hor {
-            width: 144px;
-            height: 15px;
-            top: 368px;
-            left: 182px;
-            background: linear-gradient(to right, #b38eed 80%, #eb4242 100%);
-
-            .mixture2_ultrasound_arrow {
-              transform: rotate(90deg);
-              animation: mixture2_ultrasound_arrow 2s infinite ease-in-out;
-            }
-          }
-
-          .mixture2_ultrasound_ver {
-            width: 15px;
-            height: 10px;
-            top: 349px;
-            left: 158px;
-            background: linear-gradient(to bottom, #9961f2 30%, #b38eed 100%);
-          }
-
-          .ultrasound2_flotation1_hor {
-            width: 150px;
-            height: 15px;
-            top: 62.5px;
-            left: 466px;
-            background: linear-gradient(to left, #eb4242 10%, #eb7171 100%);
-
-            .ultrasound2_flotation1_arrow {
-              transform: rotate(-90deg);
-              animation: ultrasound2_flotation1_arrow 2s infinite ease-in-out;
-            }
-          }
-
-          .ultrasound2_flotation1_ver {
-            width: 15px;
-            height: 15px;
-            top: 86px;
-            left: 442px;
-            background: linear-gradient(to bottom, #eb7171 20%, #ffa500 100%);
-          }
-
-          .mixture1_ultrasound2_hor {
-            width: 137px;
-            height: 15px;
-            top: 62.5px;
-            left: 714px;
-            background: linear-gradient(to left, #9961f2 0%, #b38eed 20%, #b38eed 85%, #eb4242 100%);
-
-            .mixture1_ultrasound2_arrow {
-              transform: rotate(-90deg);
-              animation: mixture1_ultrasound2_arrow 2s infinite ease-in-out;
-            }
-          }
-
-          .flotation1_flotation2_arc {
-            &:after {
-              top: 140px;
-              left: 558px;
-              border-left: 15px solid rgba(0, 0, 0, 0);
-              border-right: 15px solid #faba43;
-              border-top: 15px solid rgba(0, 0, 0, 0);
-              border-bottom: 15px solid rgba(0, 0, 0, 0);
-            }
-          }
-
-          .ultrasound2_flotation1_arc {
-            &:after {
-              top: 63px;
-              left: 442px;
-              border-left: 15px solid rgba(0, 0, 0, 0);
-              border-right: 15px solid rgba(0, 0, 0, 0);
-              border-top: 15px solid #eb7171;
-              border-bottom: 15px solid rgba(0, 0, 0, 0);
-            }
-          }
-
-          .mixture2_ultrasound_arc {
-            &:after {
-              top: 333px;
-              left: 158px;
-              border-left: 15px solid #b38eed;
-              border-right: 15px solid rgba(0, 0, 0, 0);
-              border-top: 15px solid rgba(0, 0, 0, 0);
-              border-bottom: 15px solid rgba(0, 0, 0, 0);
-            }
-          }
-
-          .ultrasound_flotation2_arc {
-            &:after {
-              top: 242px;
-              left: 367px;
-              border-left: 15px solid rgba(0, 0, 0, 0);
-              border-right: 15px solid rgba(0, 0, 0, 0);
-              border-top: 15px solid #eb7171;
-              border-bottom: 15px solid rgba(0, 0, 0, 0);
-            }
-          }
-
-          .dryer_product_arc {
-            &:after {
-              top: 242px;
-              left: 857px;
-              border-left: 15px solid rgba(0, 0, 0, 0);
-              border-right: 15px solid #61bdf2;
-              border-top: 15px solid rgba(0, 0, 0, 0);
-              border-bottom: 15px solid rgba(0, 0, 0, 0);
-            }
-          }
-
-
-          //АНИМАЦИИ ДВИЖЕНИЯ СТРЕЛОК
-          @keyframes crusher_suspension_arrow {
-            from {
-              left: 0px;
-              opacity: 0
-            }
-            50% {
-              left: 70px;
-              opacity: 1
-            }
-            51% {
-              left: 70px;
-              opacity: 0
-            }
-            75% {
-              left: 70px;
-              opacity: 0
-            }
-            to {
-              left: 70px;
-              opacity: 0
-            }
-          }
-
-          @keyframes suspension_flotation1_arrow {
-            from {
-              left: 0px;
-              opacity: 0
-            }
-            25% {
-              left: 0px;
-              opacity: 0
-            }
-            50% {
-              left: 0px;
-              opacity: 0
-            }
-            to {
-              left: 60px;
-              opacity: 1
-            }
-          }
-
-          @keyframes crusher_suspension_arrow {
-            from {
-              left: 0px;
-              opacity: 0
-            }
-            50% {
-              left: 60px;
-              opacity: 1
-            }
-            51% {
-              left: 60px;
-              opacity: 0
-            }
-            75% {
-              left: 60px;
-              opacity: 0
-            }
-            to {
-              left: 60px;
-              opacity: 0
-            }
-          }
-
-          @keyframes flotation2_dryer_arrow {
-            from {
-              left: 0px;
-              opacity: 0
-            }
-            25% {
-              left: 0px;
-              opacity: 0
-            }
-            50% {
-              left: 0px;
-              opacity: 0
-            }
-            to {
-              left: 70px;
-              opacity: 1
-            }
-          }
-
-          @keyframes dryer_product_arrow {
-            from {
-              top: 0px;
-              opacity: 0
-            }
-            50% {
-              top: 55px;
-              opacity: 1
-            }
-            51% {
-              top: 55px;
-              opacity: 0
-            }
-            75% {
-              top: 55px;
-              opacity: 0
-            }
-            to {
-              top: 55px;
-              opacity: 0
-            }
-          }
-
-          @keyframes mixture2_ultrasound_arrow {
-            from {
-              left: 0px;
-              opacity: 0
-            }
-            50% {
-              opacity: 1
-            }
-            to {
-              left: 120px;
-              opacity: 0
-            }
-          }
-
-          @keyframes ultrasound_flotation2_arrow {
-            from {
-              left: 0px;
-              opacity: 0
-            }
-            50% {
-              opacity: 1
-            }
-            to {
-              left: 130px;
-              opacity: 0
-            }
-          }
-
-          @keyframes ultrasound2_flotation1_arrow {
-            from {
-              left: 120px;
-              opacity: 0
-            }
-            50% {
-              opacity: 1
-            }
-            to {
-              left: 0px;
-              opacity: 0
-            }
-          }
-
-          @keyframes mixture1_ultrasound2_arrow {
-            from {
-              left: 110px;
-              opacity: 0
-            }
-            50% {
-              opacity: 1
-            }
-            to {
-              left: 0px;
-              opacity: 0
-            }
-          }
-
-          //КЛАССЫ ДЛЯ РАМКИ ПОДСКАЗОК
-
-          .textFrame {
-            position: absolute;
-            width: 300px;
-            height: 150px;
-            background: #ffffff;
+          .scheme {
+            min-width: 980px;
+            height: 470px;
+            margin-left: 25px !important;
+            order: -1;
+            flex-grow: 1;
+            position: relative;
+            //margin: 20px auto 0 auto;
             border-radius: 10px;
+            background-color: white;
+            z-index: 5;
             filter: none;
-            z-index: 10;
-            display: flex;
-            align-items: center;
+            transition: filter background-color .5s;
 
-            &:before {
-              content: '';
-              width: 0;
-              height: 0;
+            .block {
               position: absolute;
-              border-width: 15px 160px 15px 0;
-              border-style: solid;
-              border-color: transparent #ffffff transparent transparent;
-              opacity: 0.7;
-              z-index: -1;
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              cursor: pointer;
+
+              img {
+                width: 64px;
+                height: 64px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
             }
 
-            p {
-              width: 100%;
-              padding: 10px;
-              font-size: 18px;
-              color: $main_fc_dark;
+            .crusher {
+              top: 100px;
+              left: 25px;
+              background-color: #117d0f;
+            }
+
+            .suspension {
+              top: 100px;
+              left: 215px;
+              background-color: #117d0f;
+            }
+
+            .mixture1 {
+              top: 250px;
+              left: 115px;
+              background-color: #9961f2;
+            }
+
+            .mixture2 {
+              top: 20px;
+              left: 850px;
+              background-color: #9961f2;
+            }
+
+            .flotation1 {
+              top: 100px;
+              left: 400px;
+              background-color: #ffa500;
+            }
+
+            .flotation2 {
+              top: 200px;
+              left: 550px;
+              background-color: #ffa500;
+            }
+
+            .ultrasound1 {
+              top: 325px;
+              left: 325px;
+              background-color: #eb4242;
+            }
+
+            .ultrasound2 {
+              top: 20px;
+              left: 615px;
+              background-color: #eb4242;
+            }
+
+            .dryer {
+              top: 200px;
+              left: 750px;
+              background-color: #18a2f2;
+            }
+
+            .product {
+              top: 350px;
+              left: 850px;
+              background-color: #18a2f2;
+            }
+
+            .line {
+              position: absolute;
+
+              img {
+                width: 27px;
+                height: 27px;
+                position: absolute;
+              }
+
+              .hor {
+                top: -6px;
+                left: 0;
+              }
+            }
+
+            .arc {
+              position: absolute;
+              width: 100px;
+              height: 100px;
+
+              &:after {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 50px 50px 50px 50px;
+                transform: rotate(-45deg);
+              }
+            }
+
+            .crusher_suspension {
+              width: 93px;
+              height: 15px;
+              top: 142px;
+              left: 123px;
+              background: linear-gradient(to right, #117d0f 0%, #75cc1f 20%, #75cc1f 80%, #117d0f 100%);
+
+              .crusher_suspension_arrow {
+                top: -6px;
+                left: 0;
+                transform: rotate(90deg);
+                animation: crusher_suspension_arrow 3s infinite ease-in-out;
+              }
+            }
+
+            .suspension_flotation1 {
+              width: 88px;
+              height: 15px;
+              top: 142px;
+              left: 313px;
+              background: linear-gradient(to right, #117d0f 0%, #75cc1f 20%, #75cc1f 80%, #ffa500 100%);
+
+              .suspension_flotation1_arrow {
+                transform: rotate(90deg);
+                animation: suspension_flotation1_arrow 3s infinite ease-in-out;
+              }
+            }
+
+            .flotation1_flotation2_hor {
+              width: 85px;
+              height: 15px;
+              top: 140px;
+              left: 499px;
+              background: linear-gradient(to right, #ffa500 0%, #faba43 20%);
+
+              .flotation1_flotation2_arrow {
+                transform: rotate(90deg);
+                animation: crusher_suspension_arrow 3s infinite ease-in-out;
+              }
+            }
+
+            .flotation1_flotation2_ver {
+              width: 15px;
+              height: 37px;
+              top: 164px;
+              left: 593px;
+              background: linear-gradient(to bottom, #faba43 80%, #ffa500 100%);
+            }
+
+            .flotation2_dryer {
+              width: 103px;
+              height: 15px;
+              top: 242px;
+              left: 648px;
+              background: linear-gradient(to right, #ffa500 0%, #faba43 20%, #faba43 85%, #18a2f2 100%);
+
+              .flotation2_dryer_arrow {
+                transform: rotate(90deg);
+                animation: flotation2_dryer_arrow 3s infinite ease-in-out;
+              }
+            }
+
+            .dryer_product_hor {
+              width: 34px;
+              height: 15px;
+              top: 242px;
+              left: 849px;
+              background: linear-gradient(to right, #18a2f2 0%, #61bdf2 30%);
+            }
+
+            .dryer_product_ver {
+              width: 15px;
+              height: 85px;
+              top: 266px;
+              left: 892px;
+              background: linear-gradient(to bottom, #61bdf2 80%, #18a2f2 100%);
+
+              .dryer_product_arrow {
+                top: 0;
+                left: -6px;
+                transform: rotate(180deg);
+                animation: dryer_product_arrow 3s infinite ease-in-out;
+              }
+            }
+
+            .ultrasound_flotation2_hor {
+              width: 160px;
+              height: 15px;
+              top: 242px;
+              left: 391px;
+              background: linear-gradient(to right, #eb7171 90%, #ffa500 100%);
+
+              .ultrasound_flotation2_arrow {
+                transform: rotate(90deg);
+                animation: ultrasound_flotation2_arrow 2s infinite ease-in-out;
+              }
+            }
+
+            .ultrasound_flotation2_ver {
+              width: 15px;
+              height: 60px;
+              top: 266px;
+              left: 367px;
+              background: linear-gradient(to top, #eb4242 5%, #eb7171 100%);
+            }
+
+            .mixture2_ultrasound_hor {
+              width: 144px;
+              height: 15px;
+              top: 368px;
+              left: 182px;
+              background: linear-gradient(to right, #b38eed 80%, #eb4242 100%);
+
+              .mixture2_ultrasound_arrow {
+                transform: rotate(90deg);
+                animation: mixture2_ultrasound_arrow 2s infinite ease-in-out;
+              }
+            }
+
+            .mixture2_ultrasound_ver {
+              width: 15px;
+              height: 10px;
+              top: 349px;
+              left: 158px;
+              background: linear-gradient(to bottom, #9961f2 30%, #b38eed 100%);
+            }
+
+            .ultrasound2_flotation1_hor {
+              width: 150px;
+              height: 15px;
+              top: 62.5px;
+              left: 466px;
+              background: linear-gradient(to left, #eb4242 10%, #eb7171 100%);
+
+              .ultrasound2_flotation1_arrow {
+                transform: rotate(-90deg);
+                animation: ultrasound2_flotation1_arrow 2s infinite ease-in-out;
+              }
+            }
+
+            .ultrasound2_flotation1_ver {
+              width: 15px;
+              height: 15px;
+              top: 86px;
+              left: 442px;
+              background: linear-gradient(to bottom, #eb7171 20%, #ffa500 100%);
+            }
+
+            .mixture1_ultrasound2_hor {
+              width: 137px;
+              height: 15px;
+              top: 62.5px;
+              left: 714px;
+              background: linear-gradient(to left, #9961f2 0%, #b38eed 20%, #b38eed 85%, #eb4242 100%);
+
+              .mixture1_ultrasound2_arrow {
+                transform: rotate(-90deg);
+                animation: mixture1_ultrasound2_arrow 2s infinite ease-in-out;
+              }
+            }
+
+            .flotation1_flotation2_arc {
+              &:after {
+                top: 140px;
+                left: 558px;
+                border-left: 15px solid rgba(0, 0, 0, 0);
+                border-right: 15px solid #faba43;
+                border-top: 15px solid rgba(0, 0, 0, 0);
+                border-bottom: 15px solid rgba(0, 0, 0, 0);
+              }
+            }
+
+            .ultrasound2_flotation1_arc {
+              &:after {
+                top: 63px;
+                left: 442px;
+                border-left: 15px solid rgba(0, 0, 0, 0);
+                border-right: 15px solid rgba(0, 0, 0, 0);
+                border-top: 15px solid #eb7171;
+                border-bottom: 15px solid rgba(0, 0, 0, 0);
+              }
+            }
+
+            .mixture2_ultrasound_arc {
+              &:after {
+                top: 333px;
+                left: 158px;
+                border-left: 15px solid #b38eed;
+                border-right: 15px solid rgba(0, 0, 0, 0);
+                border-top: 15px solid rgba(0, 0, 0, 0);
+                border-bottom: 15px solid rgba(0, 0, 0, 0);
+              }
+            }
+
+            .ultrasound_flotation2_arc {
+              &:after {
+                top: 242px;
+                left: 367px;
+                border-left: 15px solid rgba(0, 0, 0, 0);
+                border-right: 15px solid rgba(0, 0, 0, 0);
+                border-top: 15px solid #eb7171;
+                border-bottom: 15px solid rgba(0, 0, 0, 0);
+              }
+            }
+
+            .dryer_product_arc {
+              &:after {
+                top: 242px;
+                left: 857px;
+                border-left: 15px solid rgba(0, 0, 0, 0);
+                border-right: 15px solid #61bdf2;
+                border-top: 15px solid rgba(0, 0, 0, 0);
+                border-bottom: 15px solid rgba(0, 0, 0, 0);
+              }
+            }
+
+
+            //АНИМАЦИИ ДВИЖЕНИЯ СТРЕЛОК
+            @keyframes crusher_suspension_arrow {
+              from {
+                left: 0px;
+                opacity: 0
+              }
+              50% {
+                left: 70px;
+                opacity: 1
+              }
+              51% {
+                left: 70px;
+                opacity: 0
+              }
+              75% {
+                left: 70px;
+                opacity: 0
+              }
+              to {
+                left: 70px;
+                opacity: 0
+              }
+            }
+
+            @keyframes suspension_flotation1_arrow {
+              from {
+                left: 0px;
+                opacity: 0
+              }
+              25% {
+                left: 0px;
+                opacity: 0
+              }
+              50% {
+                left: 0px;
+                opacity: 0
+              }
+              to {
+                left: 60px;
+                opacity: 1
+              }
+            }
+
+            @keyframes crusher_suspension_arrow {
+              from {
+                left: 0px;
+                opacity: 0
+              }
+              50% {
+                left: 60px;
+                opacity: 1
+              }
+              51% {
+                left: 60px;
+                opacity: 0
+              }
+              75% {
+                left: 60px;
+                opacity: 0
+              }
+              to {
+                left: 60px;
+                opacity: 0
+              }
+            }
+
+            @keyframes flotation2_dryer_arrow {
+              from {
+                left: 0px;
+                opacity: 0
+              }
+              25% {
+                left: 0px;
+                opacity: 0
+              }
+              50% {
+                left: 0px;
+                opacity: 0
+              }
+              to {
+                left: 70px;
+                opacity: 1
+              }
+            }
+
+            @keyframes dryer_product_arrow {
+              from {
+                top: 0px;
+                opacity: 0
+              }
+              50% {
+                top: 55px;
+                opacity: 1
+              }
+              51% {
+                top: 55px;
+                opacity: 0
+              }
+              75% {
+                top: 55px;
+                opacity: 0
+              }
+              to {
+                top: 55px;
+                opacity: 0
+              }
+            }
+
+            @keyframes mixture2_ultrasound_arrow {
+              from {
+                left: 0px;
+                opacity: 0
+              }
+              50% {
+                opacity: 1
+              }
+              to {
+                left: 120px;
+                opacity: 0
+              }
+            }
+
+            @keyframes ultrasound_flotation2_arrow {
+              from {
+                left: 0px;
+                opacity: 0
+              }
+              50% {
+                opacity: 1
+              }
+              to {
+                left: 130px;
+                opacity: 0
+              }
+            }
+
+            @keyframes ultrasound2_flotation1_arrow {
+              from {
+                left: 120px;
+                opacity: 0
+              }
+              50% {
+                opacity: 1
+              }
+              to {
+                left: 0px;
+                opacity: 0
+              }
+            }
+
+            @keyframes mixture1_ultrasound2_arrow {
+              from {
+                left: 110px;
+                opacity: 0
+              }
+              50% {
+                opacity: 1
+              }
+              to {
+                left: 0px;
+                opacity: 0
+              }
+            }
+
+            //КЛАССЫ ДЛЯ РАМКИ ПОДСКАЗОК
+
+            .textFrame {
+              position: absolute;
+              width: 300px;
+              height: 150px;
+              background: #ffffff;
+              border-radius: 10px;
+              filter: none;
+              z-index: 10;
+              display: flex;
+              align-items: center;
+
+              &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                border-width: 15px 160px 15px 0;
+                border-style: solid;
+                border-color: transparent #ffffff transparent transparent;
+                opacity: 0.7;
+                z-index: -1;
+              }
+
+              p {
+                width: 100%;
+                padding: 10px;
+                font-size: 18px;
+                color: $main_fc_dark;
+              }
+            }
+
+            .textFrame1 {
+              transform: translate(400px, 300px);
+
+              &:before {
+                left: 0px;
+                top: -40px;
+                margin-left: 0px;
+                transform: rotate(70deg);
+              }
+            }
+
+            .textFrame2 {
+              transform: translate(470px, 180px);
+
+              &:before {
+                left: 0px;
+                top: -40px;
+                margin-left: 50px;
+                transform: rotate(140deg);
+              }
+            }
+
+            .textFrame3 {
+              transform: translate(390px, 150px);
+
+              &:before {
+                left: 0px;
+                top: 150px;
+                margin-left: 0px;
+                transform: rotate(-70deg);
+              }
+            }
+
+            .textFrame4 {
+              transform: translate(620px, 200px);
+
+              &:before {
+                left: 0px;
+                top: 130px;
+                margin-left: 130px;
+                transform: rotate(-140deg);
+              }
+            }
+
+            .textFrame5 {
+              transform: translate(470px, 180px);
+
+              &:before {
+                left: 200px;
+                top: 50px;
+                margin-left: 50px;
+                transform: rotate(210deg);
+              }
+            }
+
+          }
+
+          .blockLight {
+            filter: saturate(200%) brightness(100%) grayscale(0%) !important;
+
+            img {
+              filter: saturate(100%) brightness(100%) grayscale(0%) !important;
             }
           }
 
-          .textFrame1 {
-            transform: translate(400px, 300px);
-
-            &:before {
-              left: 0px;
-              top: -40px;
-              margin-left: 0px;
-              transform: rotate(70deg);
-            }
+          .schemeDark {
+            background-color: darken(#ffffff, 30%);
+            transition: background-color .5s;
           }
 
-          .textFrame2 {
-            transform: translate(470px, 180px);
-
-            &:before {
-              left: 0px;
-              top: -40px;
-              margin-left: 50px;
-              transform: rotate(140deg);
-            }
+          .schemeDark *:not(.textFrame) {
+            filter: brightness(50%) grayscale(30%);
+            transition: filter .5s;
           }
-
-          .textFrame3 {
-            transform: translate(390px, 150px);
-
-            &:before {
-              left: 0px;
-              top: 150px;
-              margin-left: 0px;
-              transform: rotate(-70deg);
-            }
-          }
-
-          .textFrame4 {
-            transform: translate(620px, 200px);
-
-            &:before {
-              left: 0px;
-              top: 130px;
-              margin-left: 130px;
-              transform: rotate(-140deg);
-            }
-          }
-
-          .textFrame5 {
-            transform: translate(470px, 180px);
-
-            &:before {
-              left: 200px;
-              top: 50px;
-              margin-left: 50px;
-              transform: rotate(210deg);
-            }
-          }
-
-        }
-
-        .blockLight {
-          filter: saturate(200%) brightness(100%) grayscale(0%) !important;
-
-          img {
-            filter: saturate(100%) brightness(100%) grayscale(0%) !important;
-          }
-        }
-
-        .schemeDark {
-          background-color: darken(#ffffff, 30%);
-          transition: background-color .5s;
-        }
-
-        .schemeDark *:not(.textFrame) {
-          filter: brightness(50%) grayscale(30%);
-          transition: filter .5s;
         }
       }
 
@@ -1369,7 +1383,8 @@ main {
           p {
             padding: 0 25px;
             margin: 0 auto;
-            font-size: 18px
+            font-size: 18px;
+            line-height: 1.8rem;
           }
         }
 
@@ -1711,19 +1726,29 @@ main {
           position: relative;
           flex-direction: column;
 
-          .info {
-            margin: 30px auto 0 auto;
-            width: 60%;
-            order: 1;
-            flex-grow: 0;
-            font-size: 28px;
-            line-height: 2.2rem;
+          h2 {
+            font-size: 56px
           }
 
-          .scheme {
-            order: 0;
-            flex-grow: 0;
+          .schemeBlock {
+            flex-grow: 1;
+            flex-direction: column;
+
+            .info {
+              margin: 30px auto 0 auto;
+              width: 60%;
+              order: 1;
+              flex-grow: 0;
+              font-size: 28px;
+              line-height: 2.2rem;
+            }
+
+            .scheme {
+              order: 0;
+              flex-grow: 0;
+            }
           }
+
         }
 
         //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА"
@@ -1936,14 +1961,28 @@ main {
 
         //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
         .schemeWrapper {
-          .info {
-            margin: 30px auto 0 auto;
-            font-size: 24px;
-            line-height: 2rem;
+          h2 {
+            font-size: 50px
           }
 
-          .scheme {
-            margin: 50px auto 0 auto;
+          .schemeBlock {
+            //flex-grow: 1;
+            flex-direction: column;
+            justify-content: center;
+
+            .info {
+              width: 60%;
+              order: 1;
+              flex-grow: 0;
+              margin: 30px auto 0 auto;
+              font-size: 24px;
+              line-height: 2rem;
+            }
+
+            .scheme {
+              order: 0;
+              flex-grow: 0;
+            }
           }
         }
 
@@ -2125,19 +2164,23 @@ main {
 
         //КОНТЕЙНЕР "ТЕХНОЛОГИЧЕСКАЯ СХЕМА"
         .schemeWrapper {
-          flex-direction: column;
 
-          .info {
-            //width: 80%;
-            order: 0;
-            flex-grow: 0;
-            padding: 0 20px;
-          }
+          .schemeBlock {
+            flex-direction: column;
+            justify-content: flex-start;
 
-          .scheme {
-            order: 1;
-            flex-grow: 0;
-            margin-top: 25px;
+            .info {
+              order: 0;
+              flex-grow: 0;
+              padding: 0 25px;
+            }
+
+            .scheme {
+              margin-top: 25px;
+              margin-left: 0 !important;
+              order: 1;
+              flex-grow: 0;
+            }
           }
         }
 
@@ -2219,7 +2262,6 @@ main {
       }
     }
   }
-
 }
 
 //Отображение для экранов от 768px до 1023px шириной
@@ -2280,8 +2322,9 @@ main {
           .companyInfo {
             width: 100%;
             flex-basis: 5%;
-            font-size: 16px;
-            padding: 0 10px;
+            font-size: 18px;
+            padding: 0 25px;
+            text-align: justify;
           }
 
           .solution {
@@ -2328,7 +2371,29 @@ main {
 
         //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
         .schemeWrapper {
-          display: none;
+          height: 100%;
+          background-color: white;
+          color: #2d2e2e;
+          padding: 0;
+          margin-top: 60px;
+
+          h2 {
+            font-size: 36px
+          }
+
+          .schemeBlock {
+            margin-top: 40px;
+
+            .info {
+              padding: 0 25px;
+              text-align: justify;
+              font-size: 18px;
+            }
+
+            .scheme {
+              display: none;
+            }
+          }
         }
 
         //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА"
@@ -2373,8 +2438,8 @@ main {
         //КОНТЕЙНЕР "О КОМПАНИИ"
         .aboutCompanyWrapper {
           height: 100vh;
-          margin-top: 20px;
-          padding: 50px 0;
+          margin-top: 50px;
+          padding: 0;
           flex-direction: column;
           justify-content: center;
           color: #2d2e2e;
@@ -2383,13 +2448,13 @@ main {
 
           .companyInfoWrapper {
             margin-top: 25px;
-            //flex-basis: 50%;
+
             h2 {
-              font-size: 36px
+              font-size: 36px;
             }
 
             h4 {
-              font-size: 18px
+              font-size: 18px;
             }
 
             .line {
@@ -2397,7 +2462,10 @@ main {
             }
 
             p {
-              font-size: 18px
+              font-size: 18px;
+              padding: 0 25px;
+              line-height: 1.8rem;
+              text-align: justify;
             }
           }
 
@@ -2500,6 +2568,18 @@ main {
               }
             }
           }
+
+          .backgroundImg {
+            order: 1;
+          }
+
+          .backgroundImg2 {
+            order: 0;
+          }
+
+          .backgroundImg3 {
+            order: 2;
+          }
         }
 
         //КОНТЕЙНЕР "КОНТАКТЫ"
@@ -2532,7 +2612,6 @@ main {
       }
     }
   }
-
 }
 
 //Отображение для экранов до 767px шириной
@@ -2602,7 +2681,8 @@ main {
             width: 100%;
             flex-basis: 5%;
             font-size: 14px;
-            padding: 0 10px;
+            padding: 0 25px;
+            text-align: justify;
           }
 
           .solution {
@@ -2649,7 +2729,29 @@ main {
 
         //КОНТЕЙНЕР "СХЕМА ТЕХНОЛОГИИ"
         .schemeWrapper {
-          display: none;
+          height: 100%;
+          background-color: white;
+          color: #2d2e2e;
+          padding: 0;
+          margin-top: 60px;
+
+          h2 {
+            font-size: 24px
+          }
+
+          .schemeBlock {
+            margin-top: 40px;
+
+            .info {
+              padding: 0 25px;
+              font-size: 14px;
+              text-align: justify;
+            }
+
+            .scheme {
+              display: none;
+            }
+          }
         }
 
         //КОНТЕЙНЕР "УНИКАЛЬНЫЕ ПРЕИМУЩЕСТВА"
@@ -2695,7 +2797,7 @@ main {
         .aboutCompanyWrapper {
           height: 100%;
           margin-top: 20px;
-          padding: 25px 0;
+          padding: 25px 0 0 0;
           flex-direction: column;
           justify-content: center;
           color: #2d2e2e;
@@ -2707,11 +2809,12 @@ main {
             padding: 0;
 
             h2 {
-              font-size: 24px
+              font-size: 24px;
             }
 
             h4 {
-              font-size: 14px
+              font-size: 14px;
+              line-height: 1.8rem;
             }
 
             .line {
@@ -2719,7 +2822,9 @@ main {
             }
 
             p {
-              font-size: 14px
+              font-size: 14px;
+              text-align: justify;
+              line-height: 1.8rem;
             }
           }
 
@@ -2744,9 +2849,14 @@ main {
         .employeesWrapper {
           height: 100%;
 
+          h2 {
+            font-size: 24px;
+            padding: 0 10px;
+          }
+
           .employees {
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin: 20px 0;
 
             .employee {
               height: 340px;
@@ -2820,6 +2930,18 @@ main {
                   }
                 }
               }
+            }
+
+            .backgroundImg {
+              order: 1;
+            }
+
+            .backgroundImg2 {
+              order: 0;
+            }
+
+            .backgroundImg3 {
+              order: 2;
             }
           }
         }
